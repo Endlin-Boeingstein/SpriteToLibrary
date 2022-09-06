@@ -20,8 +20,8 @@ class XflReader
             DirectoryInfo TheFolder = new DirectoryInfo(Fpath);
             //数组记录各个xfl文件信息
             FileInfo[] xfl = TheFolder.GetFiles("Anim.xfl", SearchOption.AllDirectories);
-            FileInfo[] mxfl = TheFolder.GetFiles("main.xfl", SearchOption.AllDirectories);
-            xfl = (FileInfo[])xfl.Concat(mxfl).ToArray();
+            //新功能更新而停用///FileInfo[] mxfl = TheFolder.GetFiles("main.xfl", SearchOption.AllDirectories);
+            //新功能更新而停用///xfl = (FileInfo[])xfl.Concat(mxfl).ToArray();
             if (xfl.Length != 0)
             {
                 for (int i = 0; i < xfl.Length ; i++)
