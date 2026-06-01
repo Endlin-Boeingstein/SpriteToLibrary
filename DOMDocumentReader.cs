@@ -32,6 +32,8 @@ class DOMDocumentReader
                 href = href.Substring(href.LastIndexOf('/') + 1, href.Length - href.LastIndexOf('/') - 1).Replace(".png","") + ".png";
                 //防止add$//20240810添加
                 href = href.Substring(href.LastIndexOf('$') + 1, href.Length - href.LastIndexOf('$') - 1).Replace(".png", "") + ".png";
+                //修复二级路径//2026年5月27日添加
+                DOMBitmapItem.SetAttribute("name", href);
                 if (!sarray.Contains(href))
                 {
                     //记录引用信息
@@ -39,6 +41,8 @@ class DOMDocumentReader
                 }
                 else { }
             }
+            //保存xml//2026年5月27日添加
+            xmlDoc.Save(TheFolder.FullName);
         }
         catch
         {

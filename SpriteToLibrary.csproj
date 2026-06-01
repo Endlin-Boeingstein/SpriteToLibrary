@@ -47,6 +47,7 @@
     <Compile Include="DOMDocumentOverwriter.cs" />
     <Compile Include="DOMDocumentReader.cs" />
     <Compile Include="JudgeJoF.cs" />
+    <Compile Include="LibraryClipReader.cs" />
     <Compile Include="MainNameRewriter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
